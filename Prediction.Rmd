@@ -19,6 +19,13 @@ how well they do it. In this project, your goal will be to use data from acceler
 arm, and dumbell of 6 participants. They were asked to perform barbell lifts correctly and incorrectly in 5 different ways.
 More information is available from the website here: http://groupware.les.inf.puc-rio.br/har (see the section on the Weight Lifting Exercise Dataset)."
 
+#conclusion 
+ The expected outcome of sample error is 
+ 
+the estimated  error appropriately with cross-validation?
+
+I choose random forest method for conducting this project because it was more accurate 
+
 #Loading the Dataset
 Below codes loaded the datasets and the necessary library.
 ```{r,echo=TRUE}
@@ -94,7 +101,7 @@ prf=predict(modrf,testing)
 ptree=predict(modtree,testing)
 table(prf,ptree)
 ```
-Based on the dataset created and evaluated witht he help of the random forest model and hte Tree model. I feel confident that the most accurate model for testing dataset in the random forest model
+Based on the dataset created and evaluated witht he help of the random forest model and the Tree model. I feel confident that the most accurate model for testing dataset in the random forest model
 ```{r,echo=TRUE}
 
 answers=predict(modrf,testing)
@@ -107,3 +114,6 @@ pml_write_files = function(x){
 }
 answers
 ```
+
+
+
